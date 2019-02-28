@@ -1,28 +1,32 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter } from 'react-router-dom';
+import './css/App.css';
+import './css/Nav.css';
+import Nav from './components/navbar';
+import Pages from './components/pages';
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
+    constructor(props){
+        super(props);
+        this.state = {
+        };
+    }
+
+
+    render() {
+        return (
+            <BrowserRouter>
+                {/* Navigation Bar */}
+                <div className="container-fluid" style={{ height: '100vh' }}>
+                    <Nav />
+                    {/* Page content */}
+                    <div className="window">
+                        <Pages />
+                    </div>
+                </div>
+            </BrowserRouter>
+        );
+    }
 }
 
 export default App;
