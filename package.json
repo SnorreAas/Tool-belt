@@ -3,6 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "mongodb": "^3.1.13",
+    "mongoose": "^5.4.16",
+    "morgan": "^1.9.1",
     "react": "^16.7.0",
     "react-bootstrap": "^1.0.0-beta.5",
     "react-dom": "^16.7.0",
@@ -23,5 +28,19 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "description": "Easy to use search engine, with live rendering components.",
+  "main": "data.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SnorreAas/Tool-belt.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SnorreAas/Tool-belt/issues"
+  },
+  "homepage": "https://github.com/SnorreAas/Tool-belt#readme"
 }
