@@ -1,5 +1,9 @@
+body {
+    font-family: "Courier New";
+}
+
 .nav {
-    background-color: #563D7C;
+    background-color: #3E3E3E;
     height: 60px;
     align-content: center;
     padding: 20px;
@@ -14,8 +18,9 @@
 }
 
 .col-md a{
-    color: white;
+    color: #9D8C20;
     text-decoration: none;
+    margin-left: 7%;
 }
 
 .window {
@@ -27,16 +32,137 @@
     text-align: center;
 }
 
-.bouncy{
- animation:bouncy 5s infinite linear;
- position:relative;
+.limit {
+    overflow: hidden;
 }
-@keyframes bouncy {
- 0%{top:0em}
- 40%{top:0em}
- 43%{top:-0.9em}
- 46%{top:0em}
- 48%{top:-0.4em}
- 50%{top:0em}
- 100%{top:0em;}
+
+.limit img {
+    width: 100%;
+    height: auto;
+}
+
+.logo {
+    font-size: 30px;
+}
+
+.Category {
+    font-weight: bold;
+}
+
+
+.cat_btn {
+    background-color: #F3F3F3;
+    border-width: 1px;
+    border-color: #9D8C20;
+    margin-right: 3.5%;
+    margin-bottom: 10px;
+}
+
+.cat_btn:hover {
+    transition: 0.3s;
+    background-color: #9D8C20;
+    color: white;
+}
+
+.spacing {
+    padding-top: 30px;
+}
+
+h1{
+  position:fixed;
+  top:10px;
+  right:10px;
+  text-align:right;
+  font-size:14px;
+  color:#9D8C20;
+  font-weight:100;
+  opacity:.5;
+  line-height:2em;
+}
+a{
+   text-transform:lowercase;
+  text-decoration:none;
+  color:#9D8C20;
+}
+
+h1:hover{
+opacity:1;}
+
+
+input:focus{
+    width:200px;
+    height:40px;
+    border-radius:40px;
+    padding: 0 20px;
+    line-height: 2em;
+    font-weight: 100;
+    font-size: 12px;
+  cursor:auto;
+}
+
+
+input{
+    float:right;
+    border:3px solid #9D8C20;
+    outline:none;
+    width:40px;
+  cursor:pointer;
+
+    -webkit-transition:.2s all ease-in;
+    -moz-transition:.2s all ease-in;
+    transition:.2s all ease-in;
+    height:40px;
+    color:#9D8C20;
+    border-radius:40px;
+    background:none;
+    font-size:0;
+}
+.close span{
+width:3px;
+height:20px;
+border-radius:2px;
+background: #9D8C20;
+display:inline-block;
+}
+
+.front{
+    position:absolute;
+    right:24px;
+    top:13px;
+    transform: rotate(-45deg);
+    opacity:0;
+    animation-delay: 2s;
+    -webkit-transition:.2s all ease-in;
+    -moz-transition:.2s all ease-in;
+    transition:.2s all ease-in;
+
+}
+
+
+.back{
+    position:absolute;
+    right:-3px;
+    top:33px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    transition:.2s all ease-in;
+}
+
+
+
+input:focus + div .front{
+    opacity:1;
+    -webkit-transition-delay: .2s;
+    -moz-transition-delay: .2s;
+    transition-delay: .2s;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+
+input:focus + div .back{
+    right:24px;
+    top:13px;
 }

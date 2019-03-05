@@ -6,7 +6,7 @@ class Nav extends Component {
         return (
             <div className="row">
                 <div className="col-md nav">
-                    <Link to="/">HOME</Link>
+                    <Link className="logo" to="/">TB</Link>
                 </div>
                 {/*<div className="col-md nav" />*/}
             </div>
