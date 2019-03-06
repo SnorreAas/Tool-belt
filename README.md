@@ -2,7 +2,7 @@
 # Tool-belt
 Easy to use search engine, with live rendering components.
 
-## Available Scripts
+## Launch project
 
 In the project directory, you can run:
 
