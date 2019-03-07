@@ -43,12 +43,16 @@ body {
 
 .logo {
     font-size: 30px;
+    text-transform: uppercase;
 }
 
 .Category {
     font-weight: bold;
 }
 
+.divider {
+    max-width: 600px;
+}
 
 .cat_btn {
     background-color: #F3F3F3;
@@ -56,6 +60,10 @@ body {
     border-color: #9D8C20;
     margin-right: 3.5%;
     margin-bottom: 10px;
+}
+
+.btnActive {
+    background-color: #9D8C20;
 }
 
 .cat_btn:hover {
@@ -97,16 +105,16 @@ input:focus{
     line-height: 2em;
     font-weight: 100;
     font-size: 12px;
-  cursor:auto;
+    cursor:auto;
 }
 
 
 input{
-    float:right;
+    float:center;
     border:3px solid #9D8C20;
     outline:none;
     width:40px;
-  cursor:pointer;
+    cursor:pointer;
 
     -webkit-transition:.2s all ease-in;
     -moz-transition:.2s all ease-in;
@@ -118,17 +126,17 @@ input{
     font-size:0;
 }
 .close span{
-width:3px;
-height:20px;
-border-radius:2px;
-background: #9D8C20;
-display:inline-block;
+    width:3px;
+    height:20px;
+    border-radius:2px;
+    background: #9D8C20;
+    display:inline-block;
 }
 
 .front{
     position:absolute;
-    right:24px;
-    top:13px;
+    right:5px;
+    top:40px;
     transform: rotate(-45deg);
     opacity:0;
     animation-delay: 2s;
@@ -138,11 +146,15 @@ display:inline-block;
 
 }
 
+.search {
+    max-width: 200px;
+    min-width: 200px;
+}
 
 .back{
     position:absolute;
-    right:-3px;
-    top:33px;
+    right:80px;
+    top:62px;
     -webkit-transform: rotate(-45deg);
     -moz-transform: rotate(-45deg);
     transform: rotate(-45deg);
@@ -163,6 +175,6 @@ input:focus + div .front{
 
 
 input:focus + div .back{
-    right:24px;
-    top:13px;
+    right:5px;
+    top:40px;
 }
