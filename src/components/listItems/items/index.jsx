@@ -8,9 +8,7 @@ export default class Items extends Component {
         }
     }
 
-    function Preloader(props) {
-        return <img src="Hammer.png" />;
-    }
+
 
     render() {
         return (
@@ -20,8 +18,8 @@ export default class Items extends Component {
                         src="/images/Hammer.png"
                         >
                         <img />
-                        <div>Error!</div>
-                        <Preloader />
+                        <div></div>
+
                     </ImageLoader>
                     <h4>{this.props.product.Name}</h4>
                     <p className="price">$19.99</p>
