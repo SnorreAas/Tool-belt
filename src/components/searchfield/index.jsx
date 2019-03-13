@@ -10,9 +10,16 @@ class Searchfield extends Component {
     }
 
     handleOnChangeSearch(event){
-        this.props.handleData(this.state.search);
         this.setState({
             search: event.target.value.substr(0, 20),
+        });
+        this.props.handleData(this.state.search);
+        console.log(this.state.search);
+    }
+
+    handleSearchData(){
+        this.setState({
+            search: '',
         });
     }
 
@@ -26,7 +33,7 @@ render() {
                 placeholder="Search.."
             />
             <div className="close">
-                <span className="front"></span>
+                <span className="front" onClick={this.handleSearchData.bind(this)}></span>
                 <span className="back"></span>
             </div>
         </div>

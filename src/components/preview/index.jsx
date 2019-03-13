@@ -36,6 +36,7 @@ export default class Preview extends Component {
         this.state = {
             label: 'Use the searchfield or choose a category!',
             fromChildSearch: '',
+            fromChildCatOrNot: true,
         };
     }
 
@@ -45,12 +46,18 @@ export default class Preview extends Component {
         });
     }
 
+    handleCat(data){
+        this.setState({
+            fromChildCatOrNot: data
+        });
+    }
+
     changeLabel(label) {
         this.setState({label});
     }
 
     render() {
-        const { label, fromChildSearch } = this.state;
+        const { label, fromChildSearch, catOrNot } = this.state;
         return (
             <div className="window container">
                 {/* Title */}
@@ -81,7 +88,7 @@ export default class Preview extends Component {
                 <div className="row">
                     <div className="col justify-content-center center"></div>
                     <div className="col center justify-content-center search spacing">
-                        <Searchfield handleData={this.handleData.bind(this)} />
+                        <Searchfield catOrNot={catOrNot} handleData={this.handleData.bind(this)} />
                     </div>
                     <div className="col center justify-content-center"></div>
                 </div>
@@ -90,7 +97,6 @@ export default class Preview extends Component {
                     <div className="col-sm-2 center"></div>
                     <div className="col-sm-8 center spacing">
                         <h5>{label}</h5>
-                        <h1>{this.state.search}</h1>
                     </div>
                     <div className="col-sm-2 center"></div>
                 </div>
