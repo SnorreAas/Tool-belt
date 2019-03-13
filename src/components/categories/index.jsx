@@ -1,46 +1,24 @@
 import React, { Component } from 'react';
 
-const test = [
-    'Hand tools',
-    'Equipment',
-    'Power tools',
-    'Radios',
-    'Fasteners',
-    'Ladders',
-    'Abrasives',
-    'Air tools',
-    'Cleaning',
-];
-
-class Categories extends Component {
+export default class Categories extends Component {
     constructor(props) {
     super(props);
     this.state = {
-        setBtnActive: 'btnActive',
-        setBtnDisabled: '',
-        btnClass: '',
     };
-    this.handleOnChange = this.handleOnChange.bind(this);
 }
 
-handleOnChange(){
-    this.setState({
-        test: this.state.setBtnActive,
-    });
+handleChange(e){
+    const label = e.target.value;
+    this.props.changeLabel(label);
 }
-
 
 render() {
-    const { btnClass } = this.state;
-    const listItems = test.map((item, i) =>
-        <button key={i} onChange={() => this.handleOnChange} className={"cat_btn "+{btnClass}}>{item}</button>
-    );
     return (
         <div>
-            {listItems}
+            {this.props.categories.map(item => (
+                <button key={item.id} onClick={this.handleChange.bind(this)} value={item.Category} className="cat_btn">{item.Category}</button>
+            ))}
         </div>
         );
     }
 }
-
-export default Categories;
