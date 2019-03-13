@@ -17,18 +17,18 @@ const categories = [
 ];
 
 const products = [
-    { Name: 'Hammer', Category: 'Hand tools', id:1 },
-    { Name: 'Saw', Category: 'Hand tools', id:2 },
-    { Name: 'Wrench', Category: 'Hand tools', id:3 },
-    { Name: 'Hard hat', Category: 'Equipment', id:4 },
-    { Name: 'Drill', Category: 'Power tools', id:5 },
-    { Name: 'Screwdriver', Category: 'Power tools', id:6 },
-    { Name: 'Walkie Talkie', Category: 'Radio', id:7 },
-    { Name: 'Clamp', Category: 'Fasteners', id:8 },
-    { Name: 'Spring clamp', Category: 'Fasteners', id:9 },
-    { Name: 'Hand drill', Category: 'Hand tools', id:10 },
-    { Name: 'Push drill', Category: 'Hand tools', id:11 },
-    { Name: 'Electric drill', Category: 'Power tools', id:12 },
+    { Name: 'Hammer', Category: 'Hand tools', id:1, price:16 },
+    { Name: 'Saw', Category: 'Hand tools', id:2, price:22 },
+    { Name: 'Wrench', Category: 'Hand tools', id:3, price:4 },
+    { Name: 'Hard hat', Category: 'Equipment', id:4, price:50 },
+    { Name: 'Drill', Category: 'Power tools', id:5, price:99 },
+    { Name: 'Screwdriver', Category: 'Power tools', id:6, price:20 },
+    { Name: 'Walkie Talkie', Category: 'Radio', id:7, price:150 },
+    { Name: 'Clamp', Category: 'Fasteners', id:8, price:10 },
+    { Name: 'Spring clamp', Category: 'Fasteners', id:9, price:14 },
+    { Name: 'Hand drill', Category: 'Hand tools', id:10, price:25 },
+    { Name: 'Push drill', Category: 'Hand tools', id:11, price:66 },
+    { Name: 'Electric drill', Category: 'Power tools', id:12, price:250 },
 ];
 export default class Preview extends Component {
     constructor(props) {
