@@ -23,7 +23,7 @@ const products = [
     { Name: 'Hard hat', Category: 'Equipment', id:4, price:50 },
     { Name: 'Drill', Category: 'Power tools', id:5, price:99 },
     { Name: 'Screwdriver', Category: 'Power tools', id:6, price:20 },
-    { Name: 'Walkie Talkie', Category: 'Radio', id:7, price:150 },
+    { Name: 'Walkie Talkie', Category: 'Radios', id:7, price:150 },
     { Name: 'Clamp', Category: 'Fasteners', id:8, price:10 },
     { Name: 'Spring clamp', Category: 'Fasteners', id:9, price:14 },
     { Name: 'Hand drill', Category: 'Hand tools', id:10, price:25 },
@@ -36,6 +36,7 @@ const products = [
     { Name: 'Hand-held Radio', Category: 'Radios', id:18, price:300 },
     { Name: 'Construction Boots', Category: 'Equipment', id:19, price:30 },
     { Name: 'Gloves', Category: 'Equipment', id:20, price:23 },
+    { Name: 'Air Brush', Category: 'Air tools', id:21, price:500 },
 ];
 export default class Preview extends Component {
     constructor(props) {
