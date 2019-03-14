@@ -28,7 +28,14 @@ const products = [
     { Name: 'Spring clamp', Category: 'Fasteners', id:9, price:14 },
     { Name: 'Hand drill', Category: 'Hand tools', id:10, price:25 },
     { Name: 'Push drill', Category: 'Hand tools', id:11, price:66 },
-    { Name: 'Electric drill', Category: 'Power tools', id:12, price:250 },
+    { Name: 'Broom', Category: 'Cleaning', id:13, price:30 },
+    { Name: 'Cloth', Category: 'Cleaning', id:14, price:5 },
+    { Name: 'Metal Ladder', Category: 'Ladders', id:15, price:100 },
+    { Name: 'Stock Wheel', Category: 'Abrasives', id:16, price:2 },
+    { Name: 'Wodden Ladder', Category: 'Ladders', id:17, price:50 },
+    { Name: 'Hand-held Radio', Category: 'Radios', id:18, price:300 },
+    { Name: 'Construction Boots', Category: 'Equipment', id:19, price:30 },
+    { Name: 'Gloves', Category: 'Equipment', id:20, price:23 },
 ];
 export default class Preview extends Component {
     constructor(props) {
