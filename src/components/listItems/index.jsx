@@ -5,23 +5,21 @@ export default class listItems extends Component {
     constructor() {
         super();
         this.state = {
-            catOrNot: false,
         }
     }
 
     render() {
         let filteredItems;
-        const { catOrNot } = this.state;
         let categoryItems = this.props.products.filter((product) => {
             return product.Category === this.props.label;
         });
-        if(catOrNot){
+        if(this.props.label===''){
             filteredItems = this.props.products.filter((product) => {
-                return product.Name.toLowerCase().indexOf(this.props.fromChildSearch) !== -1;
+                return product.Name.toLowerCase().includes(this.props.fromChildSearch.toLowerCase()) || !this.props.fromChildSearch;
             });
         }else{
             filteredItems = categoryItems.filter((product) => {
-                return product.Name.toLowerCase().indexOf(this.props.fromChildSearch) !== -1;
+                return product.Name.toLowerCase().includes(this.props.fromChildSearch.toLowerCase()) || !this.props.fromChildSearch;
             });
         }
 

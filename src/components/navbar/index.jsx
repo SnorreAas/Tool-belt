@@ -8,7 +8,6 @@ class Nav extends Component {
                 <div className="col-md nav">
                     <Link className="logo" to="/">TB</Link>
                 </div>
-                {/*<div className="col-md nav" />*/}
             </div>
         );
     }

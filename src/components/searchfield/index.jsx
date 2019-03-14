@@ -11,15 +11,18 @@ class Searchfield extends Component {
 
     handleOnChangeSearch(event){
         this.setState({
-            search: event.target.value.substr(0, 20),
+            search: event.target.value.substr(0, 20)
+        }, () => {
+            this.props.handleData(this.state.search);
+            console.log(this.state.search);
         });
-        this.props.handleData(this.state.search);
-        console.log(this.state.search);
     }
 
     handleSearchData(){
         this.setState({
-            search: '',
+            search: ''
+        }, () => {
+            this.props.handleData(this.state.search);
         });
     }
 
@@ -32,9 +35,9 @@ render() {
                 onChange={this.handleOnChangeSearch}
                 placeholder="Search.."
             />
-            <div className="close">
+            <div className="close" onClick={this.handleSearchData.bind(this)}>
                 <span className="front" onClick={this.handleSearchData.bind(this)}></span>
-                <span className="back"></span>
+                <span className="back" onClick={this.handleSearchData.bind(this)}></span>
             </div>
         </div>
     );
